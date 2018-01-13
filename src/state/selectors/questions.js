@@ -41,3 +41,16 @@ export const rightAnsweredQuestionsSelector = createSelector(
         answeredQuestion.correctAnswer === answeredQuestion.answer,
     ),
 );
+
+/**
+ * Tells weather a game has finished.
+ * A game is considered finished if
+ * numberOfRemainingQuestions === 0 and numberOfAnsweredQuestions > 0
+ * @param {Object} state - Application state
+ * @returns {Boolean}
+ */
+export const gameFinishedSelector = createSelector(
+  remainingQuestionsSelector,
+  answeredQuestionsSelector,
+  (remaining, answered) => remaining.length === 0 && answered.length > 0,
+);

@@ -1,19 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
 import {
   answeredQuestionsSelector,
   rightAnsweredQuestionsSelector,
+  gameFinishedSelector,
 } from '../../state/selectors/questions';
 import { Layout } from './Layout';
 
-const Container = ({ answers, totalAnswersCount, rightAnswersCount }) => {
-  return (
+const Container = ({
+  isGameFinished,
+  answers,
+  totalAnswersCount,
+  rightAnswersCount,
+}) => {
+  return isGameFinished ? (
     <Layout
       answers={answers}
       totalAnswersCount={totalAnswersCount}
       rightAnswersCount={rightAnswersCount}
     />
+  ) : (
+    <Redirect to="/" />
   );
 };
 
@@ -34,6 +43,7 @@ const mapStateToProps = state => ({
   answers: answeredQuestionsSelector(state),
   totalAnswersCount: answeredQuestionsSelector(state).length,
   rightAnswersCount: rightAnsweredQuestionsSelector(state).length,
+  isGameFinished: gameFinishedSelector(state),
 });
 
 const enhance = connect(mapStateToProps);
