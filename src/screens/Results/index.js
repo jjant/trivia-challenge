@@ -1,5 +1,3 @@
-import React from 'react';
+import { Container } from './Container';
 
-export const Results = () => {
-  return <div>Results</div>;
-};
+export { Container as Results };
