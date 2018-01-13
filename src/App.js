@@ -5,6 +5,8 @@ import { makeStore } from './state/store';
 import { Home } from './screens/Home';
 import { Quiz } from './screens/Quiz';
 import { Results } from './screens/Results';
+import { Root } from './components';
+import './config/styles';
 
 const store = makeStore();
 
@@ -13,11 +15,11 @@ class App extends Component {
     return (
       <Router>
         <Provider store={store}>
-          <div>
+          <Root>
             <Route exact path="/" component={Home} />
             <Route exact path="/results" component={Results} />
             <Route path="/quiz" component={Quiz} />
-          </div>
+          </Root>
         </Provider>
       </Router>
     );
