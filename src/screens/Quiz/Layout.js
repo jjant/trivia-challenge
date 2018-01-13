@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Actions, Button, Container, QuestionBox } from './components';
+import {
+  Actions,
+  Button,
+  Container,
+  Subtitle,
+  QuestionBox,
+} from './components';
 import { Title, LinkIf } from '../../components';
 
 export const Layout = ({
@@ -15,15 +21,15 @@ export const Layout = ({
     <Container>
       <Title>{category}</Title>
       <QuestionBox dangerouslySetInnerHTML={{ __html: questionText }} />
-      <p style={{ textAlign: 'center', marginTop: '25px' }}>
+      <Subtitle>
         {currentQuestionIndex} of {questionCount}
-      </p>
+      </Subtitle>
       <Actions>
         <LinkIf condition={areAllAnswered} to="/results">
-          <Button onClick={answerTrue}>True</Button>
+          <Button option={true} onClick={answerTrue} />
         </LinkIf>
         <LinkIf condition={areAllAnswered} to="/results">
-          <Button onClick={answerFalse}>False</Button>
+          <Button option={false} onClick={answerFalse} />
         </LinkIf>
       </Actions>
     </Container>

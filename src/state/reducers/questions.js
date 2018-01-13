@@ -26,7 +26,7 @@ class Reducer {
   }
 
   static [actions.FETCH_QUESTIONS_SUCCESS](state, action) {
-    return shiftLeft({ ...state, remaining: action.payload });
+    return shiftLeft({ ...initialState, remaining: action.payload });
   }
 
   static [actions.ANSWER_FALSE](state, action) {

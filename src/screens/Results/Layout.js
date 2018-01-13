@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { ResponseList } from './components';
+import { Container, ResponseList } from './components';
 import { Title, FlowButton, Response } from '../../components';
 
 const renderAnswers = answers => {
@@ -16,7 +16,7 @@ const renderAnswers = answers => {
 
 export const Layout = ({ answers, totalAnswersCount, rightAnswersCount }) => {
   return (
-    <div>
+    <Container>
       <Title>You scored</Title>
       <Title>
         {rightAnswersCount} / {totalAnswersCount}
@@ -25,7 +25,7 @@ export const Layout = ({ answers, totalAnswersCount, rightAnswersCount }) => {
       <Link to="/quiz">
         <FlowButton>Play Again?</FlowButton>
       </Link>
-    </div>
+    </Container>
   );
 };
 

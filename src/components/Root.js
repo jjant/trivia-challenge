@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import backgroundImage from '../assets/images/background.jpg';
 
 export const Root = styled.div`
   width: 100%;
@@ -6,5 +7,7 @@ export const Root = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #efefef;
+  ${'' /* background: #efefef; */}
+  background: url(${backgroundImage});
+  background-size: cover;
 `;

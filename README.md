@@ -4,8 +4,10 @@ A simple, 10 question, true or false, trivia app built with React.
 
 ## Live demo
 
-Check a live demo of the app
-[here](https://code-challenge-julian-antonielli-qddkihirlr.now.sh/).
+Check a live demo of the app:
+
+* [Styled UI version](https://code-challenge-julian-antonielli-zngycbbiza.now.sh/).
+* [Wireframe version](https://code-challenge-julian-antonielli-qddkihirlr.now.sh).
 
 ## Core tools/libraries used
 
@@ -44,3 +46,7 @@ Check a live demo of the app
 * `/api` Contains API setup and functions to interact with it.
 
 * `/config` Contains application-level configuration, such as global styles.
+
+## Development time
+
+This project took about 7 hours from planning/project design to complete implementation.
