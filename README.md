@@ -11,6 +11,7 @@ Check a live demo of the app [here]().
 * create-react-app
 * React
 * Redux
+* Reselect
 * React router
 * Styled components
 

@@ -1,5 +1,3 @@
-import React from 'react';
+import { Container } from './Container';
 
-export const Quiz = () => {
-  return <div>Quiz</div>;
-};
+export { Container as Quiz };
