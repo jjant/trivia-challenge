@@ -5,7 +5,7 @@ A simple, 10 question, true or false, trivia app built with React.
 ## Live demo
 
 Check a live demo of the app
-[here](https://trivia-challenge-bxtalzjfed.now.sh/).
+[here](https://code-challenge-julian-antonielli-qddkihirlr.now.sh/).
 
 ## Core tools/libraries used
 
@@ -31,6 +31,7 @@ Check a live demo of the app
   `current` is the currently shown question, the one the user must respond at the moment.
   When the user answers this quiz question, it is moved into the `answered` array, augmenting the question object with the answer the user has input.
   `remaining` is simply an array of the remaining questions.
+  No computed/derived data is saved in the store, as this can just be accessed by using selectors (which are memoized, so there's no performance impact).
 
 * `/components` Contains general-purpose React components that could be reused
   in different parts of the application.
